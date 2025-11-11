@@ -73,7 +73,7 @@ if __name__ == "__main__":
     st.markdown("<h1 class='center-title'>🩺 Orthopedic Spinal Disease Classification</h1>", unsafe_allow_html=True)
 
     st.image("disc herination.jpeg",
-        caption="Spinal Posture Analysis",use_container_width=True)
+        caption="Spinal Posture Analysis",width=5000)
 
     st.write("""
     ### About
@@ -87,4 +87,5 @@ if __name__ == "__main__":
 
     if st.button("Predict"):
         predict_species(pelvic_tilt, sacral_slope, degree_spondylolisthesis)
+
 
