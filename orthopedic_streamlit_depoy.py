@@ -46,7 +46,7 @@ def get_degree_spondylolisthesis():
 # -----------------------------
 def predict_species(PT, SS, DS):
     try:
-        loaded_model = pickle.load(open(r"C:\Users\KAILAASH\Downloads\logistic_model_Orthopedic (1).pkl", 'rb'))
+        loaded_model = pickle.load(open("logistic_model_Orthopedic (1).pkl", 'rb'))
         new_data = [[float(PT), float(SS), float(DS)]]
         prediction = loaded_model.predict(new_data)[0]
 
@@ -72,8 +72,7 @@ def predict_species(PT, SS, DS):
 if __name__ == "__main__":
     st.markdown("<h1 class='center-title'>🩺 Orthopedic Spinal Disease Classification</h1>", unsafe_allow_html=True)
 
-    st.image(
-        r"C:\Users\KAILAASH\Desktop\M.S1ST SEM\BSS\12 Orthopedic patients - Biomechanical Analysis\disc herination.jpeg",
+    st.image("disc herination.jpeg",
         caption="Spinal Posture Analysis",use_container_width=True)
 
     st.write("""
@@ -88,3 +87,4 @@ if __name__ == "__main__":
 
     if st.button("Predict"):
         predict_species(pelvic_tilt, sacral_slope, degree_spondylolisthesis)
+
